@@ -1,0 +1,4 @@
+## Title: HeroQuests
+## Interface: 80200
+## Notes: Display interesting world quests at login
+HeroQuests.lua
