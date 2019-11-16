@@ -1,11 +1,15 @@
 root = true
 
 [*]
-end_of_line = crlf
+end_of_line = lf
 insert_final_newline = true
 charset = utf-8
 indent_size = 4
 indent_style = space
 
 [*.lua]
+end_of_line = crlf
 indent_style = tab
+
+[*.toc]
+end_of_line = crlf
