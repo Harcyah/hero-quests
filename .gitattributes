@@ -1,0 +1,3 @@
+*        text    eol=lf
+*.lua    text    eol=crlf
+*.toc     text    eol=lf
