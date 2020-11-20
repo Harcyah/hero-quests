@@ -13,14 +13,14 @@ function ZoneQuests:Create(id, name)
 end
 
 local ZONE_QUESTS = {
-	ZoneQuests:Create(1198, "Stormsong Valley"),
-	ZoneQuests:Create(896, "Drustvar"),
-	ZoneQuests:Create(895, "Tiragarde Sound"),
-	ZoneQuests:Create(1193, "Zuldazar"),
-	ZoneQuests:Create(1194, "Nazmir"),
-	ZoneQuests:Create(1195, "Vol'dun"),
-	ZoneQuests:Create(1462, "Mechagon Island"),
-	ZoneQuests:Create(1355, "Nazjatar")
+	ZoneQuests:Create(1198, 'Stormsong Valley'),
+	ZoneQuests:Create(896, 'Drustvar'),
+	ZoneQuests:Create(895, 'Tiragarde Sound'),
+	ZoneQuests:Create(1193, 'Zuldazar'),
+	ZoneQuests:Create(1194, 'Nazmir'),
+	ZoneQuests:Create(1195, 'Vol\'dun'),
+	ZoneQuests:Create(1462, 'Mechagon Island'),
+	ZoneQuests:Create(1355, 'Nazjatar')
 }
 
 local function debug(str)
@@ -85,22 +85,22 @@ end
 local playerReady = false
 local chatReady = false
 
-local frame = CreateFrame("Frame");
-frame:RegisterEvent("PLAYER_ENTERING_WORLD");
-frame:RegisterEvent("UPDATE_CHAT_WINDOWS");
-frame:RegisterEvent("QUEST_LOG_UPDATE");
+local frame = CreateFrame('Frame');
+frame:RegisterEvent('PLAYER_ENTERING_WORLD');
+frame:RegisterEvent('UPDATE_CHAT_WINDOWS');
+frame:RegisterEvent('QUEST_LOG_UPDATE');
 
-frame:SetScript("OnEvent", function(self, event, ...)
+frame:SetScript('OnEvent', function(self, event, ...)
 
-	if (event == "PLAYER_ENTERING_WORLD") then
+	if (event == 'PLAYER_ENTERING_WORLD') then
 		playerReady = true
 	end
 
-	if (event == "UPDATE_CHAT_WINDOWS") then
+	if (event == 'UPDATE_CHAT_WINDOWS') then
 		chatReady = true
 	end
 
-	if (event == "QUEST_LOG_UPDATE" and playerReady and chatReady) then
+	if (event == 'QUEST_LOG_UPDATE' and playerReady and chatReady) then
 		for i, zq in ipairs(ZONE_QUESTS) do
 			if (not zq.done) then
 				PrintWorldQuestsOfRegion(zq.id, zq.name);
