@@ -1,5 +1,5 @@
 ## Title: HeroQuests
-## Interface: 90105
+## Interface: 90200
 ## Author: harcyah@gmail.com
 ## Notes: Display interesting world quests at login
 HeroQuests.lua
